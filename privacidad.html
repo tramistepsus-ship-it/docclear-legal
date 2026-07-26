@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -29,7 +30,7 @@ footer { margin-top: 3rem; font-size: .88rem; color: #5b6472; }
 <div class="lang"><a href="#english">Read in English →</a></div>
 
 <h1>Política de Privacidad de DocClear</h1>
-<p class="meta">Última actualización: 24 de julio de 2026<br>
+<p class="meta">Última actualización: 26 de julio de 2026<br>
 Responsable: SALMERON STUDIOS LLC — <a href="mailto:salmeronstudiosllc@gmail.com">salmeronstudiosllc@gmail.com</a></p>
 
 <h2>1. Qué es DocClear</h2>
@@ -42,18 +43,22 @@ Responsable: SALMERON STUDIOS LLC — <a href="mailto:salmeronstudiosllc@gmail.c
 <p><strong>Compras.</strong> Las suscripciones (DocClear PRO) las procesa <strong>Apple</strong> a través de tu cuenta de Apple. Nosotros no recibimos ni almacenamos tu número de tarjeta; Apple nos comparte datos agregados de la transacción para activar tu membresía.</p>
 
 <h2>3. Función de IA (opcional): cuándo un documento sale del dispositivo</h2>
-<p>Solo cuando <strong>tú</strong> tocas «Reconstruir con IA» o «Traducir con IA» y aceptas el aviso, las <strong>imágenes de esa página</strong> se envían de forma cifrada (HTTPS) a:</p>
-<p><strong>Nuestro servidor</strong> (alojado en Supabase), que actúa de intermediario seguro y no las conserva más de lo necesario para procesar la petición; y <strong>Anthropic, PBC</strong> (el proveedor del modelo de IA «Claude»), que procesa las imágenes para devolver el texto y <strong>no las usa para entrenar sus modelos</strong> bajo su acuerdo comercial.</p>
-<p>Las imágenes se usan <strong>exclusivamente</strong> para generar el resultado que ves y no se venden ni se comparten con nadie más. No envíes por la función de IA documentos que no quieras procesar en la nube; el resto de la app funciona 100 % en tu dispositivo.</p>
+<p>Nada sale de tu dispositivo por su cuenta. Solo cuando <strong>tú</strong> tocas «Reconstruir con IA» o «Traducir con IA» y aceptas el aviso, se envía contenido de tu documento de forma cifrada (HTTPS). Según la función que uses, lo que se envía es distinto:</p>
+<ul>
+<li><strong>Reconstruir con IA y traducir el documento completo:</strong> se envían las <strong>imágenes</strong> de las páginas que hayas elegido (un máximo de 12 por trabajo).</li>
+<li><strong>Traducción sobre el documento:</strong> el texto se lee <strong>en tu propio dispositivo</strong> y lo que se envía son únicamente las <strong>líneas de texto</strong> reconocidas, no la imagen. Se envía una petición por cada página.</li>
+</ul>
+<p>El destino es, en ambos casos: <strong>nuestro servidor</strong> (alojado en Supabase), que actúa de intermediario seguro y <strong>no guarda ninguna copia</strong> de tu documento ni del texto; y <strong>Anthropic, PBC</strong> (el proveedor del modelo de IA «Claude»), que lo procesa para devolver el resultado y lo trata conforme a <strong>su propia política de privacidad</strong>.</p>
+<p>El contenido enviado se usa <strong>exclusivamente</strong> para generar el resultado que ves y no se vende ni se comparte con nadie más. No envíes por la función de IA documentos que no quieras procesar en la nube; el resto de la app funciona 100 % en tu dispositivo.</p>
 
 <h2>4. Datos técnicos mínimos</h2>
-<p>Nuestro servidor registra datos técnicos mínimos y temporales necesarios para operar y prevenir abuso (por ejemplo, dirección IP y marca de tiempo para límites de uso). No asociamos esos datos con tu identidad y no los usamos con fines publicitarios.</p>
+<p>Nuestro servidor registra datos técnicos mínimos necesarios para operar y prevenir abuso: la <strong>dirección IP</strong> desde la que llega la petición y una marca de tiempo, para aplicar los límites de uso. Esos registros se borran automáticamente de forma periódica; en condiciones normales de servicio ningún registro supera los <strong>30 días</strong>. No asociamos esos datos con tu identidad y no los usamos con fines publicitarios.</p>
 
 <h2>5. Seguridad</h2>
 <p>Ciframos los documentos en reposo en tu dispositivo, usamos conexiones cifradas (TLS) para la función de IA, y la clave del proveedor de IA vive solo en nuestro servidor, nunca dentro de la app. Ningún sistema es 100 % infalible, pero aplicamos medidas acordes con la sensibilidad de los documentos.</p>
 
 <h2>6. Retención y borrado</h2>
-<p>Tus documentos permanecen en tu dispositivo hasta que <strong>tú</strong> los borras dentro de la app o desinstalas DocClear. Las imágenes enviadas a la función de IA se procesan y se descartan; no mantenemos copias para otros fines.</p>
+<p>Tus documentos permanecen en tu dispositivo hasta que <strong>tú</strong> los borras dentro de la app o desinstalas DocClear. Lo que envías a la función de IA —imágenes o líneas de texto— se procesa y se descarta; no mantenemos copias para otros fines. Los registros técnicos de la sección 4 se borran periódicamente y no se conservan más allá de unos 30 días.</p>
 
 <h2>7. Menores</h2>
 <p>DocClear no está dirigida a menores de 13 años y no recopila conscientemente su información.</p>
@@ -70,7 +75,7 @@ Responsable: SALMERON STUDIOS LLC — <a href="mailto:salmeronstudiosllc@gmail.c
 <hr>
 
 <h1 id="english">DocClear Privacy Policy</h1>
-<p class="meta">Last updated: July 24, 2026<br>
+<p class="meta">Last updated: July 26, 2026<br>
 Data controller: SALMERON STUDIOS LLC — <a href="mailto:salmeronstudiosllc@gmail.com">salmeronstudiosllc@gmail.com</a></p>
 
 <h2>1. What DocClear is</h2>
@@ -83,30 +88,34 @@ Data controller: SALMERON STUDIOS LLC — <a href="mailto:salmeronstudiosllc@gma
 <p><strong>Purchases.</strong> Subscriptions (DocClear PRO) are processed by <strong>Apple</strong> through your Apple Account. We never receive or store your card number; Apple shares aggregated transaction data with us so we can activate your membership.</p>
 
 <h2>3. AI feature (optional): when a document leaves your device</h2>
-<p>Only when <strong>you</strong> tap "Reconstruct with AI" or "Translate with AI" and accept the notice, the <strong>images of that page</strong> are sent over an encrypted connection (HTTPS) to:</p>
-<p><strong>Our server</strong> (hosted on Supabase), which acts as a secure relay and does not retain them longer than needed to process the request; and <strong>Anthropic, PBC</strong> (the provider of the "Claude" AI model), which processes the images to return the text and <strong>does not use them to train its models</strong> under its commercial agreement.</p>
-<p>The images are used <strong>solely</strong> to produce the result you see; they are never sold or shared with anyone else. Do not send documents through the AI feature that you would rather not process in the cloud; the rest of the app works 100% on your device.</p>
+<p>Nothing leaves your device on its own. Only when <strong>you</strong> tap "AI Restore" or "AI Translate" and accept the notice is content from your document sent over an encrypted connection (HTTPS). What is sent depends on the feature you use:</p>
+<ul>
+<li><strong>AI Restore and full-document translation:</strong> the <strong>images</strong> of the pages you selected are sent (a maximum of 12 per job).</li>
+<li><strong>Translation over the document:</strong> the text is read <strong>on your own device</strong> and only the recognised <strong>lines of text</strong> are sent, not the image. One request is sent per page.</li>
+</ul>
+<p>In both cases the destination is: <strong>our server</strong> (hosted on Supabase), which acts as a secure relay and <strong>keeps no copy</strong> of your document or its text; and <strong>Anthropic, PBC</strong> (the provider of the "Claude" AI model), which processes it to return the result and handles it under <strong>its own privacy policy</strong>.</p>
+<p>The content sent is used <strong>solely</strong> to produce the result you see; it is never sold or shared with anyone else. Do not send documents through the AI feature that you would rather not process in the cloud; the rest of the app works 100% on your device.</p>
 
 <h2>4. Minimal technical data</h2>
-<p>Our server records minimal, temporary technical data needed to operate the service and prevent abuse (for example, IP address and timestamp for rate limiting). We do not link this data to your identity and we do not use it for advertising.</p>
+<p>Our server records the minimal technical data needed to operate the service and prevent abuse: the <strong>IP address</strong> the request comes from and a timestamp, used to enforce rate limits. Those records are deleted automatically on a recurring basis; under normal service conditions no record is older than <strong>30 days</strong>. We do not link this data to your identity and we do not use it for advertising.</p>
 
 <h2>5. Security</h2>
 <p>Documents are encrypted at rest on your device, the AI feature uses encrypted connections (TLS), and the AI provider key lives only on our server, never inside the app. No system is completely infallible, but we apply measures appropriate to the sensitivity of these documents.</p>
 
 <h2>6. Retention and deletion</h2>
-<p>Your documents stay on your device until <strong>you</strong> delete them in the app or uninstall DocClear. Images sent to the AI feature are processed and discarded; we keep no copies for other purposes.</p>
+<p>Your documents stay on your device until <strong>you</strong> delete them in the app or uninstall DocClear. Whatever you send to the AI feature — images or lines of text — is processed and discarded; we keep no copies for other purposes. The technical records described in section 4 are deleted on a recurring basis and are not kept beyond roughly 30 days.</p>
 
 <h2>7. Children</h2>
 <p>DocClear is not directed to children under 13 and does not knowingly collect their information.</p>
 
 <h2>8. Your rights</h2>
-<p>Because your documents live on your device, you have direct control: you can view, export or delete them at any time from within the app. For privacy questions, write to <a href="mailto:tramistepsus@gmail.com">tramistepsus@gmail.com</a>.</p>
+<p>Because your documents live on your device, you have direct control: you can view, export or delete them at any time from within the app. For privacy questions, write to <a href="mailto:salmeronstudiosllc@gmail.com">salmeronstudiosllc@gmail.com</a>.</p>
 
 <h2>9. Changes</h2>
 <p>We may update this policy; we will publish the new version with its date. Continued use of the app constitutes acceptance of the changes.</p>
 
 <h2>10. Contact</h2>
-<p>TRAMISTEPS AMERICA LLC — <a href="mailto:tramistepsus@gmail.com">tramistepsus@gmail.com</a></p>
+<p>SALMERON STUDIOS LLC — <a href="mailto:salmeronstudiosllc@gmail.com">salmeronstudiosllc@gmail.com</a></p>
 
 <footer><p><a href="./">DocClear</a> · <a href="terminos.html">Términos de Uso / Terms of Use</a></p></footer>
 
