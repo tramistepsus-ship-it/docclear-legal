@@ -12,15 +12,20 @@ body {
   font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: #14181f; background: #fff;
 }
-@media (prefers-color-scheme: dark) { body { color: #e8eaed; background: #101318; } a { color: #6aa9ff; } hr { border-color: #2a2f38; } .meta { color: #9aa3b0; } .lang a { background:#1b2029; border-color:#2a2f38; color:#e8eaed; } }
+@media (prefers-color-scheme: dark) { body { color: #e8eaed; background: #101318; } a { color: #6aa9ff; } hr { border-color: #2a2f38; } .meta { color: #9aa3b0; } .lang a { background:#1b2029; border-color:#2a2f38; color:#e8eaed; } .box { background:#161b23; border-color:#2a2f38; } th, td { border-color:#2a2f38; } }
 h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .4rem; letter-spacing: -.02em; }
 h2 { font-size: 1.15rem; margin: 2.2rem 0 .5rem; letter-spacing: -.01em; }
+h3 { font-size: 1rem; margin: 1.5rem 0 .4rem; }
 .meta { color: #5b6472; font-size: .92rem; margin: 0 0 1.6rem; }
 a { color: #0b62d6; }
 hr { border: 0; border-top: 1px solid #e4e7ec; margin: 3.5rem 0 2.5rem; }
 .lang { margin: 0 0 2rem; }
 .lang a { display: inline-block; text-decoration: none; font-size: .88rem; padding: .35rem .7rem; border: 1px solid #e4e7ec; border-radius: 999px; background: #f7f8fa; color: #14181f; }
 strong { font-weight: 600; }
+.box { border: 1px solid #e4e7ec; background: #f7f8fa; border-radius: .6rem; padding: .9rem 1.1rem; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+th, td { border: 1px solid #e4e7ec; padding: .55rem .7rem; text-align: left; vertical-align: top; }
+th { font-weight: 600; }
 footer { margin-top: 3rem; font-size: .88rem; color: #5b6472; }
 </style>
 </head>
@@ -29,7 +34,7 @@ footer { margin-top: 3rem; font-size: .88rem; color: #5b6472; }
 <div class="lang"><a href="#english">Read in English →</a></div>
 
 <h1>Política de Privacidad de DocClear</h1>
-<p class="meta">Última actualización: 26 de julio de 2026<br>
+<p class="meta">Última actualización: 5 de agosto de 2026<br>
 Responsable: SALMERON STUDIOS LLC — <a href="mailto:salmeronstudiosllc@gmail.com">salmeronstudiosllc@gmail.com</a></p>
 
 <h2>1. Qué es DocClear</h2>
@@ -41,17 +46,59 @@ Responsable: SALMERON STUDIOS LLC — <a href="mailto:salmeronstudiosllc@gmail.c
 <p><strong>No usamos publicidad ni rastreadores de terceros.</strong> La app no incluye SDK de analítica publicitaria ni comparte identificadores con anunciantes.</p>
 <p><strong>Compras.</strong> Las suscripciones (DocClear PRO) las procesa <strong>Apple</strong> a través de tu cuenta de Apple. Nosotros no recibimos ni almacenamos tu número de tarjeta; Apple nos comparte datos agregados de la transacción para activar tu membresía.</p>
 
-<h2>3. Función de IA (opcional): cuándo un documento sale del dispositivo</h2>
-<p>Nada sale de tu dispositivo por su cuenta. Solo cuando <strong>tú</strong> tocas «Reconstruir con IA» o «Traducir con IA» y aceptas el aviso, se envía contenido de tu documento de forma cifrada (HTTPS). Según la función que uses, lo que se envía es distinto:</p>
+<h2>3. Función de IA (opcional): qué se envía, a quién, y con qué permiso</h2>
+
+<div class="box">
+<p style="margin:0"><strong>Resumen:</strong> la función de IA es opcional y está apagada por defecto. Nada de tu documento sale del dispositivo hasta que tú aceptas expresamente un aviso dentro de la app que nombra al proveedor de IA. Ese proveedor es <strong>Anthropic, PBC</strong> (Estados Unidos), creador del modelo «Claude».</p>
+</div>
+
+<h3>3.1 Qué datos se recogen y se envían</h3>
+<p>Depende de la función que uses. Solo se envía lo que aparece en esta tabla; nada más:</p>
+<table>
+<thead><tr><th>Función</th><th>Qué se envía</th><th>Qué NO se envía</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>Reconstruir con IA</strong> y <strong>traducir el documento completo</strong></td>
+<td>Las <strong>imágenes</strong> de las páginas que tú seleccionas (máximo 12 por trabajo) y el idioma de destino que elijas.</td>
+<td>Nombre, correo, teléfono, contactos, ubicación, identificadores publicitarios, ni ningún otro documento de tu biblioteca.</td>
+</tr>
+<tr>
+<td><strong>Traducción superpuesta sobre el documento</strong></td>
+<td>Únicamente las <strong>líneas de texto</strong> que tu propio iPhone ha reconocido en la página (el reconocimiento ocurre en el dispositivo) y el idioma de destino. Se envía una petición por página.</td>
+<td>La imagen de la página, y todo lo indicado en la fila anterior.</td>
+</tr>
+<tr>
+<td><strong>Escaneo, recorte, limpieza, borrado inteligente, extracción de texto (OCR), exportación a PDF/Word</strong></td>
+<td><strong>Nada.</strong> Estas funciones se ejecutan 100 % dentro de tu iPhone y no usan internet.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>El contenido del documento lo eliges tú. Si un documento contiene datos personales (por ejemplo un pasaporte o una carta oficial) y decides usar la función de IA sobre él, esos datos viajarán dentro de la imagen o del texto que se envía. Por eso el aviso aparece antes de cada envío y por eso el resto de la app funciona sin conexión.</p>
+
+<h3>3.2 Cómo se recogen</h3>
+<p>Se recogen exclusivamente en el momento en que tú tocas «Reconstruir con IA» o «Traducir con IA» y, a continuación, pulsas el botón de aceptación del aviso que se te muestra. No hay recogida automática, ni en segundo plano, ni programada. El envío se hace por conexión cifrada (HTTPS/TLS).</p>
+
+<h3>3.3 Para qué se usan (todos los usos)</h3>
+<p>El contenido enviado se usa <strong>única y exclusivamente</strong> para generar el resultado que tú has pedido y devolvértelo a la pantalla. En concreto:</p>
 <ul>
-<li><strong>Reconstruir con IA y traducir el documento completo:</strong> se envían las <strong>imágenes</strong> de las páginas que hayas elegido (un máximo de 12 por trabajo).</li>
-<li><strong>Traducción sobre el documento:</strong> el texto se lee <strong>en tu propio dispositivo</strong> y lo que se envía son únicamente las <strong>líneas de texto</strong> reconocidas, no la imagen. Se envía una petición por cada página.</li>
+<li><strong>No</strong> se usa para entrenar modelos de inteligencia artificial, ni nuestros ni de terceros.</li>
+<li><strong>No</strong> se vende, alquila ni cede a nadie.</li>
+<li><strong>No</strong> se usa para publicidad, elaboración de perfiles ni analítica de comportamiento.</li>
+<li><strong>No</strong> se conserva: ni nuestro servidor ni el proveedor de IA guardan una copia del documento o del texto una vez devuelto el resultado.</li>
 </ul>
-<p>El destino es, en ambos casos: <strong>nuestro servidor</strong> (alojado en Supabase), que actúa de intermediario seguro y <strong>no guarda ninguna copia</strong> de tu documento ni del texto; y <strong>Anthropic, PBC</strong> (el proveedor del modelo de IA «Claude»), que lo procesa para devolver el resultado y lo trata conforme a <strong>su propia política de privacidad</strong>.</p>
-<p>El contenido enviado se usa <strong>exclusivamente</strong> para generar el resultado que ves y no se vende ni se comparte con nadie más. No envíes por la función de IA documentos que no quieras procesar en la nube; el resto de la app funciona 100 % en tu dispositivo.</p>
+
+<h3>3.4 Con quién se comparte, y confirmación de protección equivalente</h3>
+<p>El contenido enviado pasa por dos destinos y por ninguno más:</p>
+<ul>
+<li><strong>Nuestro servidor</strong> (alojado en Supabase, proveedor de infraestructura), que actúa de intermediario seguro para proteger la clave del proveedor de IA y aplicar los límites de uso. <strong>No guarda ninguna copia</strong> de tu documento ni de tu texto.</li>
+<li><strong>Anthropic, PBC</strong> (Estados Unidos), proveedor del modelo de IA «Claude», que procesa el contenido y devuelve el resultado.</li>
+</ul>
+<p><strong>Confirmamos que Anthropic, PBC ofrece a estos datos el mismo nivel de protección, o un nivel equivalente, al que aplicamos nosotros en esta política.</strong> Accedemos al modelo mediante la API comercial de Anthropic, cuyos términos comerciales establecen que Anthropic no entrena sus modelos con el contenido de sus clientes; el contenido se procesa únicamente para devolver la respuesta solicitada, se transmite cifrado y no se vende ni se comparte con terceros con fines publicitarios. Puedes consultar sus condiciones en <a href="https://www.anthropic.com/legal/commercial-terms">anthropic.com/legal/commercial-terms</a> y su política de privacidad en <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>. Supabase actúa como proveedor de infraestructura bajo acuerdo de tratamiento de datos y no accede al contenido con ninguna otra finalidad.</p>
+<p>Si en el futuro cambiáramos de proveedor de IA, actualizaríamos esta política y el aviso dentro de la app antes de que el cambio surta efecto, y volveríamos a pedirte permiso.</p>
 
 <h2>4. Datos técnicos mínimos</h2>
-<p>Nuestro servidor registra datos técnicos mínimos necesarios para operar y prevenir abuso: la <strong>dirección IP</strong> desde la que llega la petición y una marca de tiempo, para aplicar los límites de uso. Esos registros se borran automáticamente de forma periódica; en condiciones normales de servicio ningún registro supera los <strong>30 días</strong>. No asociamos esos datos con tu identidad y no los usamos con fines publicitarios.</p>
+<p>Nuestro servidor registra datos técnicos mínimos necesarios para operar y prevenir abuso: la <strong>dirección IP</strong> desde la que llega la petición, una marca de tiempo y un identificador anónimo generado por la app (que no está ligado a tu nombre, tu correo ni tu cuenta de Apple), para aplicar los límites de uso. Esos registros se borran automáticamente de forma periódica; en condiciones normales de servicio ningún registro supera los <strong>30 días</strong>. No asociamos esos datos con tu identidad y no los usamos con fines publicitarios.</p>
 
 <h2>5. Seguridad</h2>
 <p>Ciframos los documentos en reposo en tu dispositivo, usamos conexiones cifradas (TLS) para la función de IA, y la clave del proveedor de IA vive solo en nuestro servidor, nunca dentro de la app. Ningún sistema es 100 % infalible, pero aplicamos medidas acordes con la sensibilidad de los documentos.</p>
@@ -63,7 +110,7 @@ Responsable: SALMERON STUDIOS LLC — <a href="mailto:salmeronstudiosllc@gmail.c
 <p>DocClear no está dirigida a menores de 13 años y no recopila conscientemente su información.</p>
 
 <h2>8. Tus derechos</h2>
-<p>Como los documentos viven en tu dispositivo, tú tienes control directo: puedes verlos, exportarlos o borrarlos en cualquier momento desde la app. Para consultas sobre privacidad, escríbenos a <a href="mailto:salmeronstudiosllc@gmail.com">salmeronstudiosllc@gmail.com</a>.</p>
+<p>Como los documentos viven en tu dispositivo, tú tienes control directo: puedes verlos, exportarlos o borrarlos en cualquier momento desde la app. Puedes además no usar nunca la función de IA, y el resto de la app seguirá funcionando por completo. Para consultas sobre privacidad, o para solicitar acceso o eliminación de cualquier dato, escríbenos a <a href="mailto:salmeronstudiosllc@gmail.com">salmeronstudiosllc@gmail.com</a>.</p>
 
 <h2>9. Cambios</h2>
 <p>Podemos actualizar esta política; publicaremos la nueva versión con su fecha. El uso continuado de la app implica la aceptación de los cambios.</p>
@@ -74,7 +121,7 @@ Responsable: SALMERON STUDIOS LLC — <a href="mailto:salmeronstudiosllc@gmail.c
 <hr>
 
 <h1 id="english">DocClear Privacy Policy</h1>
-<p class="meta">Last updated: July 26, 2026<br>
+<p class="meta">Last updated: August 5, 2026<br>
 Data controller: SALMERON STUDIOS LLC — <a href="mailto:salmeronstudiosllc@gmail.com">salmeronstudiosllc@gmail.com</a></p>
 
 <h2>1. What DocClear is</h2>
@@ -86,17 +133,59 @@ Data controller: SALMERON STUDIOS LLC — <a href="mailto:salmeronstudiosllc@gma
 <p><strong>No advertising and no third-party trackers.</strong> The app contains no advertising analytics SDK and shares no identifiers with advertisers.</p>
 <p><strong>Purchases.</strong> Subscriptions (DocClear PRO) are processed by <strong>Apple</strong> through your Apple Account. We never receive or store your card number; Apple shares aggregated transaction data with us so we can activate your membership.</p>
 
-<h2>3. AI feature (optional): when a document leaves your device</h2>
-<p>Nothing leaves your device on its own. Only when <strong>you</strong> tap "AI Restore" or "AI Translate" and accept the notice is content from your document sent over an encrypted connection (HTTPS). What is sent depends on the feature you use:</p>
+<h2>3. AI feature (optional): what is sent, to whom, and with what permission</h2>
+
+<div class="box">
+<p style="margin:0"><strong>In short:</strong> the AI feature is optional and off by default. No part of your document leaves the device until you expressly accept an in-app notice that names the AI provider. That provider is <strong>Anthropic, PBC</strong> (United States), maker of the "Claude" model.</p>
+</div>
+
+<h3>3.1 What data is collected and sent</h3>
+<p>It depends on the feature you use. Only what appears in this table is sent; nothing else:</p>
+<table>
+<thead><tr><th>Feature</th><th>What is sent</th><th>What is NOT sent</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>AI Restore</strong> and <strong>full-document translation</strong></td>
+<td>The <strong>images</strong> of the pages you select (maximum 12 per job) and the target language you choose.</td>
+<td>Name, email, phone number, contacts, location, advertising identifiers, or any other document in your library.</td>
+</tr>
+<tr>
+<td><strong>Translation overlaid on the document</strong></td>
+<td>Only the <strong>lines of text</strong> your own iPhone has recognised on the page (recognition happens on device) and the target language. One request per page.</td>
+<td>The page image, plus everything listed in the row above.</td>
+</tr>
+<tr>
+<td><strong>Scanning, cropping, cleanup, smart erase, text extraction (OCR), PDF/Word export</strong></td>
+<td><strong>Nothing.</strong> These features run entirely inside your iPhone and use no internet connection.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>You choose the content of the document. If a document contains personal data (a passport or an official letter, for example) and you decide to use the AI feature on it, that data will travel inside the image or the text that is sent. That is why the notice appears before every send, and why the rest of the app works offline.</p>
+
+<h3>3.2 How it is collected</h3>
+<p>It is collected only at the moment you tap "AI Restore" or "AI Translate" and then press the accept button on the notice shown to you. There is no automatic, background or scheduled collection. The transfer uses an encrypted connection (HTTPS/TLS).</p>
+
+<h3>3.3 What it is used for (all uses)</h3>
+<p>The content sent is used <strong>solely and exclusively</strong> to produce the result you asked for and return it to your screen. Specifically:</p>
 <ul>
-<li><strong>AI Restore and full-document translation:</strong> the <strong>images</strong> of the pages you selected are sent (a maximum of 12 per job).</li>
-<li><strong>Translation over the document:</strong> the text is read <strong>on your own device</strong> and only the recognised <strong>lines of text</strong> are sent, not the image. One request is sent per page.</li>
+<li>It is <strong>not</strong> used to train artificial-intelligence models, ours or anyone else's.</li>
+<li>It is <strong>not</strong> sold, rented or handed to anyone.</li>
+<li>It is <strong>not</strong> used for advertising, profiling or behavioural analytics.</li>
+<li>It is <strong>not</strong> retained: neither our server nor the AI provider keeps a copy of the document or the text once the result has been returned.</li>
 </ul>
-<p>In both cases the destination is: <strong>our server</strong> (hosted on Supabase), which acts as a secure relay and <strong>keeps no copy</strong> of your document or its text; and <strong>Anthropic, PBC</strong> (the provider of the "Claude" AI model), which processes it to return the result and handles it under <strong>its own privacy policy</strong>.</p>
-<p>The content sent is used <strong>solely</strong> to produce the result you see; it is never sold or shared with anyone else. Do not send documents through the AI feature that you would rather not process in the cloud; the rest of the app works 100% on your device.</p>
+
+<h3>3.4 Who it is shared with, and confirmation of equal protection</h3>
+<p>The content sent passes through two destinations and no others:</p>
+<ul>
+<li><strong>Our server</strong> (hosted on Supabase, an infrastructure provider), which acts as a secure relay so the AI provider key is never in the app and usage limits can be enforced. It <strong>keeps no copy</strong> of your document or your text.</li>
+<li><strong>Anthropic, PBC</strong> (United States), provider of the "Claude" AI model, which processes the content and returns the result.</li>
+</ul>
+<p><strong>We confirm that Anthropic, PBC provides this data the same level of protection, or an equivalent level, as the one we apply under this policy.</strong> We access the model through Anthropic's commercial API, whose commercial terms state that Anthropic does not train its models on customer content; the content is processed only to return the requested response, is transmitted encrypted, and is not sold or shared with third parties for advertising. Their terms are at <a href="https://www.anthropic.com/legal/commercial-terms">anthropic.com/legal/commercial-terms</a> and their privacy policy at <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>. Supabase acts as an infrastructure provider under a data processing agreement and does not access the content for any other purpose.</p>
+<p>If we ever change AI provider, we will update this policy and the in-app notice before the change takes effect, and we will ask for your permission again.</p>
 
 <h2>4. Minimal technical data</h2>
-<p>Our server records the minimal technical data needed to operate the service and prevent abuse: the <strong>IP address</strong> the request comes from and a timestamp, used to enforce rate limits. Those records are deleted automatically on a recurring basis; under normal service conditions no record is older than <strong>30 days</strong>. We do not link this data to your identity and we do not use it for advertising.</p>
+<p>Our server records the minimal technical data needed to operate the service and prevent abuse: the <strong>IP address</strong> the request comes from, a timestamp, and an anonymous identifier generated by the app (not linked to your name, your email or your Apple Account), used to enforce rate limits. Those records are deleted automatically on a recurring basis; under normal service conditions no record is older than <strong>30 days</strong>. We do not link this data to your identity and we do not use it for advertising.</p>
 
 <h2>5. Security</h2>
 <p>Documents are encrypted at rest on your device, the AI feature uses encrypted connections (TLS), and the AI provider key lives only on our server, never inside the app. No system is completely infallible, but we apply measures appropriate to the sensitivity of these documents.</p>
@@ -108,7 +197,7 @@ Data controller: SALMERON STUDIOS LLC — <a href="mailto:salmeronstudiosllc@gma
 <p>DocClear is not directed to children under 13 and does not knowingly collect their information.</p>
 
 <h2>8. Your rights</h2>
-<p>Because your documents live on your device, you have direct control: you can view, export or delete them at any time from within the app. For privacy questions, write to <a href="mailto:salmeronstudiosllc@gmail.com">salmeronstudiosllc@gmail.com</a>.</p>
+<p>Because your documents live on your device, you have direct control: you can view, export or delete them at any time from within the app. You may also never use the AI feature at all, and the rest of the app will keep working in full. For privacy questions, or to request access to or deletion of any data, write to <a href="mailto:salmeronstudiosllc@gmail.com">salmeronstudiosllc@gmail.com</a>.</p>
 
 <h2>9. Changes</h2>
 <p>We may update this policy; we will publish the new version with its date. Continued use of the app constitutes acceptance of the changes.</p>
